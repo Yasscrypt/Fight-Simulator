@@ -1,0 +1,83 @@
+/* FONT FACE */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+/*GLOBAL */
+
+body {
+	font-family: "Merriweather", serif;
+}
+
+img {
+	width: 300px;
+	height: 300px;
+}
+
+main {
+	text-align: center;
+}
+
+/* HEADER */
+header {
+	text-align: center;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+	width: 80%;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+/* MAIN */
+.container {
+	width: 80%;
+	background-color: rgb(204, 204, 204);
+	padding: 35px;
+	margin: 0 auto;
+}
+
+.instruction {
+	background-color: rgb(228, 227, 227);
+	width: 80%;
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 50px;
+}
+
+#personnage1 {
+	display: flex;
+	flex-direction: column;
+}
+
+#personnage2 {
+	display: flex;
+	flex-direction: column;
+}
+
+#resultat {
+	margin-top: 30px;
+	text-align: center;
+}
+
+/* FOOTER */
+
+.flexFoot nav a {
+	/* display: flex;
+	align-content: space-around; */
+	display: inline-block;
+	margin: 20px;
+	background-color: gray;
+	padding: 10px 5px 10px 5px;
+	color: white;
+}
+
+footer {
+	text-align: center;
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+}

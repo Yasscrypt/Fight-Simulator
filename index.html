@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>     
+	<title>Fight Simulator</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+</head>
+
+<body>
+	<!--HEADER-->
+	<header>
+		<h1>Fight Simulator</h1>
+		<h2>Prêt pour le combat ?</h2>
+	</header>
+	<!--MAIN CONTENT-->
+	<main>
+		<p class="instruction">Instruction : Cliquez sur les bouttons et attaquez l'un des personnages, puis le
+			second... Jusqu'à ce que l'un
+			des deux perde (ou gagne) !</p>
+		<div class="container">
+			<div class="flex">
+				<div id="personnage1">
+					<h3>Magicien</h3>
+					<img src="img/magicien.png" alt="personnage1" id="perso1">
+					<button id="attaquePerso1">Attaque</button>
+					<button id="superAttaquePerso1">Ultime Attaque</button>
+					<div id="infoPerso1"></div>
+				</div>
+				<div id="personnage2">
+					<h3>Nécromancien</h3>
+					<img src="img/guerrier.png" alt="personnage2" id="perso2">
+					<button id="attaquePerso2">Attaque</button>
+					<button id="superAttaquePerso2">Ultime Attaque</button>
+					<div id="infoPerso2"></div>
+				</div>
+			</div>
+
+			<div id="resultat"></div>
+		</div>
+	</main>
+	<!--FOOTER-->
+	<footer>
+		<div class="flexFoot">
+			<nav>
+				<a href="https://fr.wikipedia.org/wiki/Gandalf" target="_blank">En savoir plus sur le Magicien</a>
+				<a href="https://fr.wikipedia.org/wiki/Sauron" target="_blank">En savoir plus sur le Nécromancien</a>
+			</nav>
+		</div>
+	</footer>
+	<script type="module" src="js/app.js"></script>
+</body>
+
+</html>
