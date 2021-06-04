@@ -78,9 +78,12 @@ function instructions() {
 				resultat.innerHTML = "";
 				infoPerso1.style.backgroundColor = "transparent";
 				infoPerso2.style.backgroundColor = "transparent";
+				if (window.matchMedia("(min-width: 700px)").matches) {
 				imagePerso1.style.height = "300px";
+				imagePerso1.style.width = "300px";
 				imagePerso2.style.width = "300px";
 				imagePerso2.style.height = "300px";
+				}
 				instructions();
 			}
 		} else if (guerrier.sante === 0) {
@@ -96,10 +99,12 @@ function instructions() {
 				resultat.innerHTML = "";
 				infoPerso1.style.backgroundColor = "transparent";
 				infoPerso2.style.backgroundColor = "transparent";
+				if (window.matchMedia("(min-width: 700px)").matches) {
 				imagePerso1.style.width = "300px";
 				imagePerso1.style.height = "300px";
 				imagePerso2.style.width = "300px";
 				imagePerso2.style.height = "300px";
+				}
 				instructions();
 			}
 		}
@@ -111,40 +116,89 @@ function instructions() {
 		instruction.innerHTML = magicien.attaquer(guerrier);
 		magicien.verifier(guerrier);
 		instruction.style.backgroundColor = "gray";
-		imagePerso1.style.width = "350px";
-		imagePerso1.style.height = "350px";
-		imagePerso2.style.width = "300px";
-		imagePerso2.style.height = "300px";
+		if (window.matchMedia("(max-width: 500px)").matches) {
+			imagePerso1.style.width = "110px";
+			imagePerso1.style.height = "110px";
+			imagePerso2.style.width = "100px";
+			imagePerso2.style.height = "100px";
+		} else if (window.matchMedia("(max-width: 700px)").matches) {
+			imagePerso1.style.width = "200px";
+			imagePerso1.style.height = "200px";
+			imagePerso2.style.width = "180px";
+			imagePerso2.style.height = "180px";
+		} else if (window.matchMedia("(min-width: 700px)").matches) {
+			imagePerso1.style.width = "320px";
+			imagePerso1.style.height = "320px";
+			imagePerso2.style.width = "300px";
+			imagePerso2.style.height = "300px";
+		}
+
 		getInfo();
 	});
 	buttonSuperAttaquePerso1.addEventListener("click", () => {
 		instruction.innerHTML = magicien.coupSpecial(guerrier);
 		magicien.verifier(guerrier);
 		instruction.style.backgroundColor = "gray";
-		imagePerso1.style.width = "350px";
-		imagePerso1.style.height = "350px";
-		imagePerso2.style.width = "300px";
-		imagePerso2.style.height = "300px";
+		if (window.matchMedia("(max-width: 500px)").matches) {
+			imagePerso1.style.width = "110px";
+			imagePerso1.style.height = "110px";
+			imagePerso2.style.width = "100px";
+			imagePerso2.style.height = "100px";
+		} else if (window.matchMedia("(max-width: 700px)").matches) {
+			imagePerso1.style.width = "200px";
+			imagePerso1.style.height = "200px";
+			imagePerso2.style.width = "180px";
+			imagePerso2.style.height = "180px";
+		} else if (window.matchMedia("(min-width: 700px)").matches) {
+			imagePerso1.style.width = "320px";
+			imagePerso1.style.height = "320px";
+			imagePerso2.style.width = "300px";
+			imagePerso2.style.height = "300px";
+		}
 		getInfo();
 	});
 	buttonAttaquePerso2.addEventListener("click", () => {
 		instruction.innerHTML = guerrier.attaquer(magicien);
 		guerrier.verifier(magicien);
 		instruction.style.backgroundColor = "gray";
-		imagePerso2.style.width = "350px";
-		imagePerso2.style.height = "350px";
-		imagePerso1.style.width = "300px";
-		imagePerso1.style.height = "300px";
+		if (window.matchMedia("(max-width: 500px)").matches) {
+			imagePerso2.style.width = "110px";
+			imagePerso2.style.height = "110px";
+			imagePerso1.style.width = "100px";
+			imagePerso1.style.height = "100px";
+		} else if (window.matchMedia("(max-width: 700px)").matches) {
+			imagePerso2.style.width = "200px";
+			imagePerso2.style.height = "200px";
+			imagePerso1.style.width = "180px";
+			imagePerso1.style.height = "180px";
+		} else if (window.matchMedia("(min-width: 700px)").matches) {
+			imagePerso2.style.width = "320px";
+			imagePerso2.style.height = "320px";
+			imagePerso1.style.width = "300px";
+			imagePerso1.style.height = "300px";
+		}
 		getInfo();
 	});
 	buttonSuperAttaquePerso2.addEventListener("click", () => {
 		instruction.innerHTML = guerrier.coupSpecial(magicien);
 		guerrier.verifier(magicien);
 		instruction.style.backgroundColor = "gray";
-		imagePerso2.style.width = "350px";
-		imagePerso2.style.height = "350px";
-		imagePerso1.style.width = "300px";
-		imagePerso1.style.height = "300px";
+		if (window.matchMedia("(max-width: 500px)").matches) {
+			imagePerso2.style.width = "110px";
+			imagePerso2.style.height = "110px";
+			imagePerso1.style.width = "100px";
+			imagePerso1.style.height = "100px";
+		} else if (window.matchMedia("(max-width: 700px)").matches) {
+			imagePerso2.style.width = "200px";
+			imagePerso2.style.height = "200px";
+			imagePerso1.style.width = "180px";
+			imagePerso1.style.height = "180px";
+		} else if (window.matchMedia("(min-width: 700px)").matches) {
+			imagePerso2.style.width = "320px";
+			imagePerso2.style.height = "320px";
+			imagePerso1.style.width = "300px";
+			imagePerso1.style.height = "300px";
+		}
 		getInfo();
 	});
 	resultat.prepend(instruction);
